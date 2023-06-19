@@ -11,7 +11,7 @@ function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
 
-   return array [array.length - 1];
+    return array [array.length - 1];
 }
 
 function obtenerLargoDelArray(array) {
@@ -35,12 +35,19 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-}
+
+   array.push (elemento);
+      return array;
+   }
+  
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+
+   array.unshift(elemento);
+   return array;
 }
 
 function dePalabrasAFrase(palabras) {
@@ -48,31 +55,64 @@ function dePalabrasAFrase(palabras) {
    // Retornar un string donde todas las palabras estén concatenadas
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
-   // Tu código:
+   // Tu código:  
+   
+    return palabras.join(" ");
+
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+
+   return array.includes(elemento);
+
 }
+
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+
+   var suma = 0;
+   
+   arrayOfNums.forEach(function(arrayOfNums) {
+
+   suma += arrayOfNums;
+   });
+   
+   return suma;
+
 }
+    
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+
+  var promedio = 0;
+
+  for (var i = 0; i < resultadosTest.length; i++) {
+
+  promedio += resultadosTest[i];
+
+  }
+
+  return promedio / resultadosTest.length;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+
+   var numMayor = Math.max.apply(null,arrayOfNums);
+   
+   return numMayor;
+
 }
 
 function multiplicarArgumentos() {
